@@ -15,8 +15,8 @@ const Header = () => {
             alt="logo"
           />
           <Link to="/" class="navbar-brand">
-            <i>
-              <b className="text-color">Farmers Mart</b>
+            <i className="text-color ">
+              <b >The Farmer's Mart</b>
             </i>
           </Link>
 
@@ -42,6 +42,12 @@ const Header = () => {
               <li class="nav-item">
                 <Link to="/contact" class="nav-link active" aria-current="page">
                   <b className="text-color">Contact Us</b>
+                </Link>
+              </li>
+
+              <li class="nav-item">
+                <Link to="/FAQ" class="nav-link active" aria-current="page">
+                  <b className="text-color">FAQ</b>
                 </Link>
               </li>
             </ul>
