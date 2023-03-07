@@ -1,5 +1,4 @@
 import carousel1 from "../images/carousel_1.jpg";
-import carousel2 from "../images/carousel_2.jpg";
 
 const Carousel = () => {
   return (
@@ -23,13 +22,22 @@ const Carousel = () => {
           data-bs-slide-to="1"
           aria-label="Slide 2"
         ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src={carousel1} class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <img src={carousel2} class="d-block w-100" alt="..." />
+          <img src={carousel1} class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src={carousel1} class="d-block w-100" alt="..." />
         </div>
       </div>
       <button
