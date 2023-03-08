@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const AddCategoryForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  let navigate = useNavigate();
 
   const saveCategory = () => {
     let data = { title, description };
@@ -18,6 +22,17 @@ const AddCategoryForm = () => {
       console.warn("result", result);
       result.json().then((res) => {
         console.log("response", res);
+      });
+      navigate("/user/admin");
+      window.location.reload(true);
+      toast.success("category added  Successfully!!!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
     });
   };

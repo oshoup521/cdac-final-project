@@ -1,4 +1,4 @@
-import Carousel from "./Carousel";
+import MyCarousel from "./MyCarousel";
 import GetAllCategories from "../productComponent/GetAllCategories";
 import ProductCard from "../productComponent/ProductCard";
 import axios from "axios";
@@ -50,7 +50,7 @@ const HomePage = () => {
 
   return (
     <div className="container-fluid mb-2">
-      <Carousel />
+      <MyCarousel />
       <div className="mt-2 mb-5">
         <div className="row">
           <div className="col-md-2">

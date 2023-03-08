@@ -50,7 +50,7 @@ const UserLoginForm = () => {
           progress: undefined,
         });
 
-        navigate("/login");
+        navigate("/home");
         window.location.reload(true);
       });
     });

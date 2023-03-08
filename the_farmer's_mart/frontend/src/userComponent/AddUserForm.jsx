@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const AddUserForm = () => {
-
   let navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -33,16 +32,6 @@ const AddUserForm = () => {
       },
       body: JSON.stringify(user),
     }).then((result) => {
-      console.log("******near toast thing");
-      toast.success("Registered Successfully!!!", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
       console.warn("result", result);
       result
         .json()
@@ -53,17 +42,17 @@ const AddUserForm = () => {
           console.log("******", error);
           console.log(error);
         });
-        navigate("/home");
-        window.location.reload(true);
-    });
-    toast.success("Registered Successfully!!!", {
-      position: "top-center",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
+      navigate("/home");
+      window.location.reload(true);
+      toast.success("Registered Successfully!!!", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     });
   };
 
