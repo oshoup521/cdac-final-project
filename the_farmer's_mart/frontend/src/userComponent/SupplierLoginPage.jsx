@@ -27,7 +27,6 @@ const SupplierLoginPage = () => {
       console.log("result", result);
       result.json().then((res) => {
         sessionStorage.setItem("active-supplier", JSON.stringify(res));
-        sessionStorage.setItem("username", res.username);
         toast.success("logged in successfully!!!", {
           position: "top-center",
           autoClose: 1000,
