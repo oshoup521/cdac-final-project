@@ -97,6 +97,16 @@ public class UserController {
 		return ResponseEntity.ok(customers);
 	}
 
+	@GetMapping("supplier/all")
+	public ResponseEntity<?> getAllSupplier(){
+		System.out.println("received for getting all suppliers");
+
+		List<User> suppliers = this.userDao.findByRole("Supplier");
+		System.out.println("repsonse sent");
+		
+		return ResponseEntity.ok(suppliers);
+	}
+
 	
 
 }

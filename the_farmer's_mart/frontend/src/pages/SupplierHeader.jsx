@@ -19,6 +19,7 @@ const SupplierHeader = () => {
       progress: undefined,
     });
     sessionStorage.removeItem("active-supplier");
+    navigate("/home");
     window.location.reload(true);
   };
 

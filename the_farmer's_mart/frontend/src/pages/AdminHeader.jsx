@@ -19,6 +19,7 @@ const AdminHeader = () => {
       progress: undefined,
     });
     sessionStorage.removeItem("active-admin");
+    navigate("/home");
     window.location.reload(true);
   };
 
@@ -54,6 +55,10 @@ const AdminHeader = () => {
         >
           <b className="text-color">Assign Order Delivery</b>
         </Link>
+      </li>
+
+      <li class="nav-item">
+        {sessionStorage.getItem("username")}
       </li>
 
       <li class="nav-item">
