@@ -181,15 +181,7 @@ const Product = () => {
       <div className="row mt-2">
         <div className="col-sm-2"></div>
 
-        <div className="col-sm-10">
-          <h2>Related Products:</h2>
-          <div className="row row-cols-1 row-cols-md-4 g-4">
-              
-                {products.map((product) => {
-                  return <ProductCard item={product} />;
-                })}
-              </div>
-        </div>
+        
       </div>
     </div>
   );

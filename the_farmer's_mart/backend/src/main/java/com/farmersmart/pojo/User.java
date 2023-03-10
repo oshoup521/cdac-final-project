@@ -1,33 +1,43 @@
 package com.farmersmart.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
+@Table(name = "user_tbl")
 public class User {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
+
+	@Column(length = 30)
 	private String firstName;
-	
+
+	@Column(length = 30)
 	private String lastName;
-	
+
+	@Column(length = 30)
 	private String emailId;
-	
+
 	@JsonIgnore
+	@Column(length = 30)
 	private String password;
-	
+
+	@Column(length = 30)
 	private String phoneNo;
-	
+
+	@Column(length = 30)
 	private String role;
-	
+
 	@OneToOne
 	@JoinColumn(name = "address_id")
 	private Address address;
@@ -87,7 +97,7 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
+
 	public String getRole() {
 		return role;
 	}
@@ -102,5 +112,4 @@ public class User {
 				+ ", password=" + password + ", phoneNo=" + phoneNo + ", address=" + address + "]";
 	}
 
-	
 }

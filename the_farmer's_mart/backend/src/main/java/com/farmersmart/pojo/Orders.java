@@ -1,19 +1,23 @@
 package com.farmersmart.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "order_tbl")
 public class Orders {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(length = 30)
 	private String orderId;
 	
 	@OneToOne
@@ -26,14 +30,19 @@ public class Orders {
 	
 	private int quantity;
 	
+	@Column(length = 30)
 	private String orderDate;  // 13-01-2022 10:00 PM
 	
+	@Column(length = 30)
 	private String deliveryStatus;
 	
+	@Column(length = 30)
 	private String deliveryDate;
 	
+	@Column(length = 30)
 	private String deliveryTime; // evening, afternoon....
 
+	@Column(length = 30)
 	private String deliveryAssigned;
 	
 	private int deliveryPersonId;

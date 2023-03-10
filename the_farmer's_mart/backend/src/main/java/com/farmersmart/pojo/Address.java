@@ -1,11 +1,14 @@
 package com.farmersmart.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "address_tbl")
 public class Address {
 	
 	@Id
@@ -14,6 +17,7 @@ public class Address {
 	
 	private String street;
 	
+	@Column(length = 30)
 	private String city;
 	
 	private int pincode;

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddProductForm = () => {
   const [categories, setCategories] = useState([]);
+  let navigate = useNavigate();
 
   const retrieveAllCategories = async () => {
     const response = await axios.get("http://localhost:8080/api/category/all");
@@ -47,6 +49,8 @@ const AddProductForm = () => {
       .then((resp) => {
         let result = resp.data.data;
         alert("Product saved successfully");
+        navigate("/user/supplier");
+        window.location.reload(true);
       })
       .catch((error) => {
         console.log("Error", error);

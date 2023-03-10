@@ -25,11 +25,6 @@ const SupplierHeader = () => {
 
   return (
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
-      <li class="nav-item">
-        <Link to="/addcategory" class="nav-link active" aria-current="page">
-          <b className="text-color"> Add Category</b>
-        </Link>
-      </li>
 
       <li class="nav-item">
         <Link to="/addproduct" class="nav-link active" aria-current="page">

@@ -14,6 +14,7 @@ import AddDeliveryPerson from "./userComponent/AddDeliveryPerson";
 import DeliveryPersonLogin from "./userComponent/DeliveryPersonLogin";
 import FAQ from "./pages/FAQ";
 import Footer from "./pages/Footer";
+import ManageProduct from "./productComponent/ManageProduct";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="about" element={<AboutUs />} />
         <Route path="addproduct" element={<AddProductForm />} />
         <Route path="addcategory" element={<AddCategoryForm />} />
+        <Route path="manageproduct" element={<ManageProduct />} />
         <Route path="/product" element={<Product />} />
         <Route path="/user/register" element={<AddUserForm />} />
         <Route path="/user/login" element={<UserLoginForm />} />
@@ -49,6 +51,16 @@ function App() {
           path="/product/:productId/category/:categoryId"
           element={<Product />}
         />
+        <Route path="/user/mycart" element={<MyCart />} />
+        <Route path="/user/order/payment" element={<AddCardDetails />} />
+        <Route path="/user/myorder" element={<MyOrder />} />
+        <Route path="/user/admin/allorder" element={<AllOrders />} />
+        <Route path="/user/admin/searchOrder" element={<SearchOrder />} />
+        <Route
+          path="/user/admin/assigndelivery"
+          element={<AssignDeliveryToOrders />}
+        />
+        <Route path="/user/delivery/myorders" element={<MyDeliveries />} />
       </Routes>
       <Footer />
     </div>
