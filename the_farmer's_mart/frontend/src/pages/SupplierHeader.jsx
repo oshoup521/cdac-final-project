@@ -33,8 +33,14 @@ const SupplierHeader = () => {
       </li>
 
       <li class="nav-item">
+        <Link to="/manageproduct" class="nav-link active" aria-current="page">
+          <b className="text-color">manage Product</b>
+        </Link>
+      </li>
+
+      <li class="nav-item">
         <Link to="#" class="nav-link active" aria-current="page">
-          <b className="text-color" style={{ color: 'red' }}>Welcome {user.firstName}</b>
+          <b className="text-color" style={{ color: 'red' }}>Welcome Supplier - {user.firstName}</b>
         </Link>
       </li>
 

@@ -32,8 +32,8 @@ const AdminHeader = () => {
       </li>
 
       <li class="nav-item">
-        <Link to="/manageproduct" class="nav-link active" aria-current="page">
-          <b className="text-color">manage Product</b>
+        <Link to="/manageuser" class="nav-link active" aria-current="page">
+          <b className="text-color">Manage User</b>
         </Link>
       </li>
 
@@ -63,7 +63,7 @@ const AdminHeader = () => {
 
       <li class="nav-item">
         <Link to="#" class="nav-link active" aria-current="page">
-          <b className="text-color" style={{ color: 'red' }}>Welcome {user.firstName}</b>
+          <b className="text-color" style={{ color: 'red' }}>Welcome Admin - {user.firstName}</b>
         </Link>
       </li>
 

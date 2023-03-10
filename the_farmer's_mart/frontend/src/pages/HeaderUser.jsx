@@ -5,6 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 const HeaderUser = () => {
   let navigate = useNavigate();
 
+  const user = JSON.parse(sessionStorage.getItem("active-user"));
+  console.log(user);
+
   const userLogout = () => {
     toast.success("logged out!!!", {
       position: "top-center",
@@ -31,6 +34,12 @@ const HeaderUser = () => {
       <li class="nav-item">
         <Link to="/user/myorder" class="nav-link active" aria-current="page">
           <b className="text-color">My Order</b>
+        </Link>
+      </li>
+
+      <li class="nav-item">
+        <Link to="#" class="nav-link active" aria-current="page">
+          <b className="text-color" style={{ color: 'red' }}>Welcome Customer - {user.firstName}</b>
         </Link>
       </li>
 

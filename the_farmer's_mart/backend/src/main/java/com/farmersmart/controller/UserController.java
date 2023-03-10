@@ -67,6 +67,16 @@ public class UserController {
 		return ResponseEntity.ok(user);
 	}
 	
+	@GetMapping("all")
+	public ResponseEntity<?> getAllUsers() {
+		System.out.println("recieved request for getting ALL users!!!");
+		
+		List<User> users = this.userDao.findAll();
+		
+		System.out.println("response sent!!!");
+		return ResponseEntity.ok(users);
+	}
+	
 	@GetMapping("deliveryperson/all")
 	public ResponseEntity<?> getAllDeliveryPersons() {
 		System.out.println("recieved request for getting ALL Delivery Persons!!!");
