@@ -15,6 +15,13 @@ import DeliveryPersonLogin from "./userComponent/DeliveryPersonLogin";
 import FAQ from "./pages/FAQ";
 import Footer from "./pages/Footer";
 import ManageProduct from "./productComponent/ManageProduct";
+import MyCart from "./userComponent/MyCart";
+import AddCardDetails from "./pages/AddCardDetails";
+import MyOrder from "./userComponent/MyOrder";
+import AllOrders from "./userComponent/AllOrders";
+import SearchOrder from "./userComponent/SearchOrder";
+import AssignDeliveryToOrders from "./userComponent/AssignDeliveryToOrders";
+import MyDeliveries from "./userComponent/MyDeliveries";
 
 function App() {
   return (
